@@ -31,6 +31,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        menuCaixaDeMensagem = new javax.swing.JMenuItem();
 
         jLabel1.setText("jLabel1");
 
@@ -57,6 +58,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
+        menuCaixaDeMensagem.setText("Caixa de Mensagem");
+        menuCaixaDeMensagem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuCaixaDeMensagemActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menuCaixaDeMensagem);
+
         jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
@@ -82,6 +91,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         desktop.add(tri);
         tri.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void menuCaixaDeMensagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCaixaDeMensagemActionPerformed
+        // TODO add your handling code here:
+        TelaCaixaDeMensagem tcm = new TelaCaixaDeMensagem();
+        desktop.add(tcm);
+        tcm.setVisible(true);
+    }//GEN-LAST:event_menuCaixaDeMensagemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,5 +140,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem menuCaixaDeMensagem;
     // End of variables declaration//GEN-END:variables
 }
